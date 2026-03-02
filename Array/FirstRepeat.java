@@ -18,9 +18,13 @@ public class FirstRepeat {
       if (a == null || a.length == 1)
          return -1;
       HashSet<Integer> set = new HashSet<>();
-      for (int num : set) {
+      for (int num : a) {
          if (set.contains(num))
             return num;
+         else
+         {
+            set.add(num);
+         }
       }
       return -1;
    }
