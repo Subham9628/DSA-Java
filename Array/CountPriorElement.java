@@ -1,5 +1,6 @@
 public class CountPriorElement 
 {
+// count how many elemet element are greater then all prior element 
 
     // Time Complexity O(n^2)
     public static int countPriorWorst(int[] arr)
