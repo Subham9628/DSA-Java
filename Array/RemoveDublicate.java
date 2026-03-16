@@ -42,7 +42,6 @@ public class RemoveDublicate
                 arr[j++]=arr[i];
             }
         }
-       
         return Arrays.copyOf(arr, j+1);
     }
 }
