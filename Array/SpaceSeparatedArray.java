@@ -13,7 +13,7 @@ public class SpaceSeparatedArray
         }
         for(int num:arr2)
         {
-            System.out.print(num+" ");
+            System.out.println(num+" ");
         }
         sc.close();
     }
