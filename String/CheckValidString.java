@@ -12,11 +12,11 @@ public class CheckValidString
             if(str.charAt(i)=='#')count1++;
             if(str.charAt(i)=='*')count2++;
         }
-        return Integer.compare(count2, count1);
+        return count2-count1;
     }
     public static void main(String[] args) 
     {
         // Enter any type of input
-        System.out.println(checkValid("##*#*#*#*"));
+        System.out.println(checkValid("#**#*#*"));
     }
 }
