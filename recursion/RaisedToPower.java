@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class RaisedToPower 
 {
     static long raisedToPower(int a, int b)
@@ -7,6 +9,13 @@ public class RaisedToPower
       return a*raisedToPower(a, b-1);
     }
     public static void main(String[] args) {
-        System.out.println(raisedToPower(5, 4));
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter Base Number:");
+        int base=sc.nextInt();
+        System.out.println("Enter Exponent Number:");
+        int exp=sc.nextInt();
+        System.out.println();
+        System.out.println(raisedToPower(base,exp));
+        sc.close();
     }
 }
