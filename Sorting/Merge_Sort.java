@@ -5,22 +5,22 @@ public class Merge_Sort
     public static void main(String[] args) 
     {
         int arr[]={3,4,1,2,3,9,0};
-        divide(arr,0,arr.length);
+        divide(arr);
         System.out.println(Arrays.toString(arr));
     }
-    public static void divide(int arr[], int start, int end)
+    public static void divide(int arr[])
     {
-        if(end==1)
+        if(arr.length==1)
             {
                 return ;
             }
-        int mid=(end+start)/2;
+        int mid=(arr.length)/2;
         int left[]=new int[mid];
-        int right[]=new int[end-mid];
-        left=Arrays.copyOfRange(arr,start, mid);
-        right=Arrays.copyOfRange(arr, mid, end);
-        divide(left,0, mid);
-        divide(right,0, end-mid);
+        int right[]=new int[arr.length-mid];
+        left=Arrays.copyOfRange(arr,0, mid);
+        right=Arrays.copyOfRange(arr, mid, arr.length);
+        divide(left);
+        divide(right);
         conquer(arr,left, right);
     }
     public static void conquer(int arr[],int left[], int right[])
